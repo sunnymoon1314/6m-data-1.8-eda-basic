@@ -31,7 +31,7 @@ By the end of this lesson, you will be able to:
 |----------|-------------|-----------|
 | [Pre-Class](./pre-class.md) | What EDA is; statistics concepts; regex intro; environment setup | 30–45 min |
 | [Lesson Plan](./lesson.md) | Instructor guide for the 3-hour coding session | 3 hours |
-| [Post-Class](./assignment.md) | EDA practice challenges — clean and analyse a messy dataset | 45–60 min |
+| [Assignment](./assignment.md) | EDA practice challenges — clean and analyse a messy dataset | 45–60 min |
 | [Reference](./reference.md) | Pandas EDA cheat sheet; regex quick reference | As needed |
 
 ---
