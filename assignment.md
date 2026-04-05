@@ -166,6 +166,26 @@ Export the cleaned DataFrame to a CSV file, then reload it and verify:
 
 > **Hint:** When reloading, you'll need to parse the date column again with `parse_dates=['admission_date']`.
 
+<details>
+<summary>✅ Stretch Challenge Solution</summary>
+
+```python
+# Export
+df.to_csv('cleaned_patients.csv', index=False)
+
+# Reload
+df_reloaded = pd.read_csv('cleaned_patients.csv', parse_dates=['admission_date'])
+
+# Verify
+print(df_reloaded.info())
+print(f"Row count: {len(df_reloaded)}")  # Should match len(df) after cleaning
+print(df_reloaded.dtypes)                # admission_date should be datetime64
+```
+
+**What to watch for:** Without `parse_dates=['admission_date']`, the date column reloads as `object` (string). CSV format doesn't store data type information — you always need to re-specify date columns on reload. This is a common source of bugs in data pipelines.
+
+</details>
+
 ---
 
 ## 💬 Reflection (5 min)
@@ -178,4 +198,4 @@ In 2–3 sentences, answer:
 
 ## 📤 Share Your Work
 
-Post your cleaned DataFrame's `.info()` output and your reflection in **Discord** under `#assignments`.
+Post your cleaned DataFrame's `.info()` output and your reflection in the **#peer-reviews** Discord channel. For questions, post in **#questions**.
